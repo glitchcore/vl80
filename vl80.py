@@ -2,6 +2,61 @@ import vlc
 import curses
 import time
 import threading
+import re
+
+class Subtitles:
+    def __init__(self, filename):
+        self.filename = filename
+    
+    def add(self, position, text, duration=200):
+        # Parse position and duration strings to get start and end time
+        start_time = self.format_time(position)
+        end_time = self.format_time(position + duration)
+
+        # Read the file
+        with open(self.filename, 'r', encoding="utf-8") as file:
+            content = file.read()
+            entries = content.strip().split("\n\n")
+
+        # Insert the new subtitle
+        new_entry = f"{len(entries) + 1}\n{start_time} --> {end_time}\n{text}"
+        position_found = False
+        for i, entry in enumerate(entries):
+            entry_time = re.search(r'(\d{2}:\d{2}:\d{2},\d{3})', entry).group(1)
+            if self.parse_time(entry_time) > self.parse_time(start_time):
+                entries.insert(i, new_entry)
+                position_found = True
+                break
+
+        # If the subtitle is to be placed at the end
+        if not position_found:
+            entries.append(new_entry)
+
+        # Update indices
+        for i, entry in enumerate(entries):
+            lines = entry.split("\n")
+            lines[0] = str(i + 1)
+            entries[i] = "\n".join(lines)
+
+        # Write back to the file
+        with open(self.filename, 'w', encoding="utf-8") as file:
+            file.write("\n\n".join(entries))
+
+    @staticmethod
+    def parse_time(s):
+        # Convert time string to milliseconds
+        hours, minutes, seconds = s.split(":")
+        seconds, millis = seconds.split(",")
+        return int(hours) * 3600000 + int(minutes) * 60000 + int(seconds) * 1000 + int(millis)
+
+    @staticmethod
+    def format_time(ms):
+        # Convert milliseconds to time string
+        hours = ms // 3600000
+        minutes = (ms % 3600000) // 60000
+        seconds = (ms % 60000) // 1000
+        millis = ms % 1000
+        return f"{hours:02d}:{minutes:02d}:{seconds:02d},{millis:03d}"
 
 class NcursesApp:
     def __init__(self, key_handler=None):
@@ -61,6 +116,9 @@ class NcursesApp:
 if __name__ == "__main__":
     ui = NcursesApp()
 
+
+    subtitles = Subtitles("vl80.srt")
+
     instance = vlc.Instance("--file-caching=5000")
     player = instance.media_player_new("vl80.mp4")
 
@@ -87,9 +145,9 @@ if __name__ == "__main__":
 
     def get_ts():
         if player.is_playing():
-            return time.time() - start_time
+            return Subtitles.format_time(int((time.time() - start_time) * 1000))
         else:
-            return player.get_time() / 1000
+            return Subtitles.format_time(int(player.get_time()))
 
     def key_handler(key):
         key = chr(key)
@@ -119,6 +177,7 @@ if __name__ == "__main__":
         elif key == "z":
             name = ui.input(1, "name:")
             ui.set(1, f"save {name} at {player.get_time()}")
+            subtitles.add(player.get_time(), name)
 
         elif key == "q":
             ui.close()
