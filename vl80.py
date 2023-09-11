@@ -59,8 +59,10 @@ class Subtitles:
         return f"{hours:02d}:{minutes:02d}:{seconds:02d},{millis:03d}"
 
 class NcursesApp:
-    def __init__(self, key_handler=None):
-        self.SIZE = 5
+    LINE_SIZE = 80
+
+    def __init__(self, key_handler=None, SIZE=5):
+        self.SIZE = SIZE
         self.strings = [""] * self.SIZE
 
         self.key_handler = key_handler
@@ -89,7 +91,7 @@ class NcursesApp:
 
     def input(self, line, prompt):
         self._lock = True
-        self.stdscr.addstr(line, 0, " " * 80)
+        self.stdscr.addstr(line, 0, " " * self.LINE_SIZE)
         self.stdscr.addstr(line, 0, prompt)
         self.stdscr.refresh()
         curses.echo()  # Enable user input
@@ -102,7 +104,8 @@ class NcursesApp:
     def _run(self):
         while self.running:
             key = self.stdscr.getch()  # Get user input
-            self.key_handler(key)
+            if self.key_handler is not None:
+                self.key_handler(key)
             time.sleep(0.02)  # Small delay to prevent too rapid updates
 
     def run(self):
@@ -118,11 +121,14 @@ class Multiplayer:
         instance = vlc.Instance("--file-caching=5000")
         self.players = [instance.media_player_new(x) for x in [name] * N]
 
+        self.play()
+        self.start_time = time.time()
+        time.sleep(0.1)
+
     def play(self):
         for player in self.players:
             player.play()
         
-
     def set_time(self, time):
         for player in self.players:
             player.set_time(time)
@@ -139,39 +145,31 @@ class Multiplayer:
     
     def toggle_fullscreen(self):
         self.players[0].toggle_fullscreen()
+
+    def seek(self, dt):
+        # update start time
+        self.start_time = time.time() - player.get_time() / 1000
+
+        self.start_time -= dt
+        player.set_time(int((time.time() - self.start_time) * 1000))
+
+    def play_pause(self):
+        self.pause()
+
+        # update start time
+        self.start_time = time.time() - player.get_time() / 1000
+
+    def get_ts_str(self):
+        if player.is_playing():
+            return Subtitles.format_time(int((time.time() - self.start_time) * 1000))
+        else:
+            return Subtitles.format_time(int(player.get_time()))
         
 if __name__ == "__main__":
     ui = NcursesApp()
 
     subtitles = Subtitles("vl80_1part.srt")
     player = Multiplayer("vl80_1part.mp4", 1)
-
-    player.play()
-    start_time = time.time()
-    time.sleep(0.1)
-
-    def seek(dt):
-        global start_time
-
-        # update start time
-        start_time = time.time() - player.get_time() / 1000
-
-        start_time -= dt
-        player.set_time(int((time.time() - start_time) * 1000))
-
-    def play_pause():
-        global start_time
-
-        player.pause()
-
-        # update start time
-        start_time = time.time() - player.get_time() / 1000
-
-    def get_ts():
-        if player.is_playing():
-            return Subtitles.format_time(int((time.time() - start_time) * 1000))
-        else:
-            return Subtitles.format_time(int(player.get_time()))
 
     def key_handler(key):
         key = chr(key)
@@ -181,22 +179,22 @@ if __name__ == "__main__":
             player.toggle_fullscreen()
             ui.set(1, "toggle fullscreen")
         elif key == "p":
-            play_pause()
+            player.play_pause()
             ui.set(1, "play/pause")
 
         elif key == ".":
-            ui.set(1, f"seek > to {get_ts()}")
-            seek(0.1)
+            ui.set(1, f"seek > to {player.get_ts_str()}")
+            player.seek(0.1)
         elif key == ",":
-            ui.set(1, f"seek < to {get_ts()}")
-            seek(-0.1)
+            ui.set(1, f"seek < to {player.get_ts_str()}")
+            player.seek(-0.1)
         
         elif key == "/":
-            ui.set(1, f"seek >> to {get_ts()}")
-            seek(5)
+            ui.set(1, f"seek >> to {player.get_ts_str()}")
+            player.seek(5)
         elif key == "m":
-            ui.set(1, f"seek << to {get_ts()}")
-            seek(-5)
+            ui.set(1, f"seek << to {player.get_ts_str()}")
+            player.seek(-5)
 
         elif key == "z":
             name = ui.input(1, "name:")
@@ -215,7 +213,7 @@ if __name__ == "__main__":
         # t_start = time.time() * 1000 - player.get_time()
 
         while ui.running:
-            ui.set(3, f"pos: {get_ts()}")
+            ui.set(3, f"pos: {player.get_ts_str()}")
             # ui.set(4, f"paused: {player.is_playing()}")
             time.sleep(0.05)
             # player.set_time(int(time.time() * 1000 - t_start))
