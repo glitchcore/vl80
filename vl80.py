@@ -113,14 +113,38 @@ class NcursesApp:
         self.running = False
         curses.endwin()
 
+class Multiplayer:
+    def __init__(self, name, N=1) -> None:
+        instance = vlc.Instance("--file-caching=5000")
+        self.players = [instance.media_player_new(x) for x in [name] * N]
+
+    def play(self):
+        for player in self.players:
+            player.play()
+        
+
+    def set_time(self, time):
+        for player in self.players:
+            player.set_time(time)
+
+    def get_time(self):
+        return self.players[0].get_time()
+    
+    def pause(self):
+        for player in self.players:
+            player.pause()
+    
+    def is_playing(self):
+        return self.players[0].is_playing()
+    
+    def toggle_fullscreen(self):
+        self.players[0].toggle_fullscreen()
+        
 if __name__ == "__main__":
     ui = NcursesApp()
 
-
-    subtitles = Subtitles("vl80.srt")
-
-    instance = vlc.Instance("--file-caching=5000")
-    player = instance.media_player_new("vl80.mp4")
+    subtitles = Subtitles("vl80_1part.srt")
+    player = Multiplayer("vl80_1part.mp4", 1)
 
     player.play()
     start_time = time.time()
@@ -129,11 +153,11 @@ if __name__ == "__main__":
     def seek(dt):
         global start_time
 
-        start_time -= dt
-        player.set_time(int((time.time() - start_time) * 1000))
-
         # update start time
         start_time = time.time() - player.get_time() / 1000
+
+        start_time -= dt
+        player.set_time(int((time.time() - start_time) * 1000))
 
     def play_pause():
         global start_time
