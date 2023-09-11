@@ -159,11 +159,14 @@ class Multiplayer:
         # update start time
         self.start_time = time.time() - player.get_time() / 1000
 
-    def get_ts_str(self):
+    def get_ts(self):
         if player.is_playing():
-            return Subtitles.format_time(int((time.time() - self.start_time) * 1000))
+            return time.time() - self.start_time
         else:
-            return Subtitles.format_time(int(player.get_time()))
+            return player.get_time() / 1000
+
+    def get_ts_str(self):
+        return Subtitles.format_time(int(self.get_ts() * 1000))
         
 if __name__ == "__main__":
     ui = NcursesApp()
@@ -210,13 +213,10 @@ if __name__ == "__main__":
 
     try:
         ui.run()
-        # t_start = time.time() * 1000 - player.get_time()
 
         while ui.running:
             ui.set(3, f"pos: {player.get_ts_str()}")
-            # ui.set(4, f"paused: {player.is_playing()}")
             time.sleep(0.05)
-            # player.set_time(int(time.time() * 1000 - t_start))
         
     except KeyboardInterrupt:
         pass
