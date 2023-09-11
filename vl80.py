@@ -169,7 +169,7 @@ class Multiplayer:
         return Subtitles.format_time(int(self.get_ts() * 1000))
         
 if __name__ == "__main__":
-    ui = NcursesApp()
+    ui = NcursesApp(SIZE=20)
 
     subtitles = Subtitles("vl80_1part.srt")
     player = Multiplayer("vl80_1part.mp4", 1)
@@ -215,7 +215,9 @@ if __name__ == "__main__":
         ui.run()
 
         while ui.running:
-            ui.set(3, f"pos: {player.get_ts_str()}")
+            ui.set(10, f"pos: {player.get_ts_str()}")
+            ui.set(11, f"pos: {player.get_ts_str()}")
+            ui.set(15, f"pos: {player.get_ts_str()}")
             time.sleep(0.05)
         
     except KeyboardInterrupt:
