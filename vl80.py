@@ -4,6 +4,9 @@ import time
 import threading
 import re
 
+
+LINE_SIZE = 80
+
 class Subtitles:
     def __init__(self, filename):
         self.filename = filename
@@ -42,6 +45,23 @@ class Subtitles:
         with open(self.filename, 'w', encoding="utf-8") as file:
             file.write("\n\n".join(entries))
 
+    def get(self, time, count=1):
+        # Read the file
+        with open(self.filename, 'r', encoding="utf-8") as file:
+            content = file.read()
+            entries = content.strip().split("\n\n")
+
+        subtitles = []
+        # Find subtitles
+        for _, entry in enumerate(entries):
+            entry_time = re.search(r'(\d{2}:\d{2}:\d{2},\d{3})', entry).group(1)
+            if self.parse_time(entry_time) > time:
+                subtitles.append(entry)
+                count -= 1
+                if not count:
+                    break
+        return subtitles
+
     @staticmethod
     def parse_time(s):
         # Convert time string to milliseconds
@@ -59,8 +79,6 @@ class Subtitles:
         return f"{hours:02d}:{minutes:02d}:{seconds:02d},{millis:03d}"
 
 class NcursesApp:
-    LINE_SIZE = 80
-
     def __init__(self, key_handler=None, SIZE=5):
         self.SIZE = SIZE
         self.strings = [""] * self.SIZE
@@ -91,7 +109,7 @@ class NcursesApp:
 
     def input(self, line, prompt):
         self._lock = True
-        self.stdscr.addstr(line, 0, " " * self.LINE_SIZE)
+        self.stdscr.addstr(line, 0, " " * LINE_SIZE)
         self.stdscr.addstr(line, 0, prompt)
         self.stdscr.refresh()
         curses.echo()  # Enable user input
@@ -167,7 +185,22 @@ class Multiplayer:
 
     def get_ts_str(self):
         return Subtitles.format_time(int(self.get_ts() * 1000))
-        
+
+def print_progress(ui, condition, progress_len=10, line_num=1):
+    # condition = start, final, current
+    start, final, current = condition
+    all = final - start
+    complete = current - start
+    if complete < all:
+        percent = complete / all
+        percent_in_bar = (int)((progress_len-2) * percent)
+    else:
+        percent_in_bar = progress_len-2
+    bar = f"[{'|'*percent_in_bar}{' '*(progress_len-percent_in_bar-2)}]"
+    ui.set(line_num, bar)
+    ui.set(line_num+1, f"{final-current}")
+
+
 if __name__ == "__main__":
     ui = NcursesApp(SIZE=20)
 
@@ -213,11 +246,23 @@ if __name__ == "__main__":
 
     try:
         ui.run()
-
+        progress_len = min(LINE_SIZE, 100)
+        start = 0
+        s_time = 0
+        num = 1
         while ui.running:
             ui.set(10, f"pos: {player.get_ts_str()}")
-            ui.set(11, f"pos: {player.get_ts_str()}")
-            ui.set(15, f"pos: {player.get_ts_str()}")
+            ui.set(9, f"pos: {player.get_ts()}")
+            st = subtitles.get(player.get_time())
+            for s in st:
+                temp_num, _, text = s.split("\n")
+                # if (int)(temp_num.strip()) > num:
+                    # start = s_time
+                    # num = temp_num
+                s_time = re.search(r'(\d{2}:\d{2}:\d{2},\d{3})', s).group(1)
+                # ui.set(12, f"{Subtitles.parse_time(s_time)} - {player.get_time()}")
+                print_progress(ui, (start, Subtitles.parse_time(s_time), player.get_ts() * 1000), progress_len)
+                ui.set(5, text)
             time.sleep(0.05)
         
     except KeyboardInterrupt:
