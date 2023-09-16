@@ -249,39 +249,41 @@ class ProgressSubtitles:
 if __name__ == "__main__":
     ui = NcursesApp(SIZE=20)
 
-    subtitles = Subtitles("vl80_1part.srt")
-    player = Multiplayer("vl80_1part.mp4", 1)
+    subtitles = Subtitles("sub/vl80_1part.srt")
+    player = Multiplayer("vl80_1part.mp4", 2)
+    time.sleep(0.1)
+    player.pause()
 
     prog_subtitles = ProgressSubtitles(subtitles.get_entries(), ui=ui)
 
     def key_handler(key):
         key = chr(key)
-        ui.set(0, f"Key ({key}) was pressed.")
+        ui.set(8, f"Key ({key}) was pressed.")
 
         if key == "f":
             player.toggle_fullscreen()
-            ui.set(1, "toggle fullscreen")
+            ui.set(9, "toggle fullscreen")
         elif key == "p":
             player.play_pause()
-            ui.set(1, "play/pause")
+            ui.set(9, "play/pause")
 
         elif key == ".":
-            ui.set(1, f"seek > to {player.get_ts_str()}")
+            ui.set(9, f"seek > to {player.get_ts_str()}")
             player.seek(0.1)
         elif key == ",":
-            ui.set(1, f"seek < to {player.get_ts_str()}")
+            ui.set(9, f"seek < to {player.get_ts_str()}")
             player.seek(-0.1)
 
         elif key == "/":
-            ui.set(1, f"seek >> to {player.get_ts_str()}")
+            ui.set(9, f"seek >> to {player.get_ts_str()}")
             player.seek(5)
         elif key == "m":
-            ui.set(1, f"seek << to {player.get_ts_str()}")
+            ui.set(9, f"seek << to {player.get_ts_str()}")
             player.seek(-5)
 
         elif key == "z":
             name = ui.input(1, "name:")
-            ui.set(1, f"save {name} at {player.get_time()}")
+            ui.set(9, f"save {name} at {player.get_time()}")
             subtitles.add(player.get_time(), name)
 
         elif key == "q":
