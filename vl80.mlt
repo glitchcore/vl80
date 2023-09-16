@@ -1,0 +1,789 @@
+<?xml version="1.0" standalone="no"?>
+<mlt LC_NUMERIC="C" version="7.4.0" title="Shotcut version 22.01.30" producer="main_bin">
+  <profile description="automatic" width="640" height="480" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="4" display_aspect_den="3" frame_rate_num="25" frame_rate_den="1" colorspace="601"/>
+  <playlist id="main_bin">
+    <property name="xml_retain">1</property>
+  </playlist>
+  <producer id="black" in="00:00:00.000" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">0</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="set.test_audio">0</property>
+  </producer>
+  <playlist id="background">
+    <entry producer="black" in="00:00:00.000" out="00:56:55.960"/>
+  </playlist>
+  <chain id="chain0" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain3" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain1" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain4" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain7" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain2" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain5" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain6" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain8" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain9" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain10" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain11" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain12" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain13" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain14" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain15" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain16" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain17" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain18" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain19" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain20" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain21" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <playlist id="playlist0">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V1</property>
+    <entry producer="chain0" in="00:00:00.000" out="00:00:08.520"/>
+    <blank length="00:01:25.360"/>
+    <entry producer="chain3" in="00:01:33.920" out="00:01:38.880"/>
+    <entry producer="chain1" in="00:01:38.920" out="00:02:11.480"/>
+    <blank length="00:01:56.400"/>
+    <entry producer="chain4" in="00:04:07.920" out="00:04:17.240"/>
+    <blank length="00:01:07.520"/>
+    <entry producer="chain7" in="00:05:24.800" out="00:05:52.160"/>
+    <blank length="00:02:03.160"/>
+    <entry producer="chain2" in="00:07:55.360" out="00:08:19.600"/>
+    <blank length="00:00:11.480"/>
+    <entry producer="chain5" in="00:08:31.120" out="00:08:42.520"/>
+    <blank length="00:00:30.680"/>
+    <entry producer="chain6" in="00:09:13.240" out="00:09:59.960"/>
+    <blank length="00:00:26.360"/>
+    <entry producer="chain8" in="00:10:26.360" out="00:10:33.360"/>
+    <blank length="00:00:13.480"/>
+    <entry producer="chain9" in="00:10:46.880" out="00:15:19.760"/>
+    <blank length="00:00:55.880"/>
+    <entry producer="chain10" in="00:16:15.680" out="00:16:48.600"/>
+    <blank length="00:00:42.840"/>
+    <entry producer="chain11" in="00:17:31.480" out="00:18:03.240"/>
+    <blank length="00:01:11.640"/>
+    <entry producer="chain12" in="00:19:14.920" out="00:19:32.920"/>
+    <blank length="00:04:14.600"/>
+    <entry producer="chain13" in="00:23:47.560" out="00:25:49.360"/>
+    <blank length="00:01:35.000"/>
+    <entry producer="chain14" in="00:27:24.400" out="00:27:57.600"/>
+    <blank length="00:00:47.840"/>
+    <entry producer="chain15" in="00:28:45.480" out="00:29:27.960"/>
+    <blank length="00:00:28.800"/>
+    <entry producer="chain16" in="00:29:56.800" out="00:30:05.400"/>
+    <blank length="00:00:29.560"/>
+    <entry producer="chain17" in="00:30:35.000" out="00:31:40.360"/>
+    <blank length="00:00:23.160"/>
+    <entry producer="chain18" in="00:32:03.560" out="00:32:58.760"/>
+    <blank length="00:02:41.360"/>
+    <entry producer="chain19" in="00:35:40.160" out="00:36:11.920"/>
+    <blank length="00:00:34.720"/>
+    <entry producer="chain20" in="00:36:46.680" out="00:37:13.720"/>
+    <blank length="00:00:08.960"/>
+    <entry producer="chain21" in="00:37:22.720" out="00:56:55.960"/>
+  </playlist>
+  <chain id="chain22" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain23" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain24" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain25" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain26" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain27" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain28" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain29" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain30" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain31" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain32" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain33" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain34" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain35" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain36" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain37" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain38" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain39" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain40" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain41" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain42" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain43" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain44" out="00:56:55.960">
+    <property name="length">00:56:56.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">vl80.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">29ff4b7e500db41895705512639be192</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">vl80.mp4</property>
+    <property name="xml">was here</property>
+  </chain>
+  <playlist id="playlist1">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V2</property>
+    <blank length="00:00:08.560"/>
+    <entry producer="chain22" in="00:00:08.560" out="00:00:40.520"/>
+    <entry producer="chain23" in="00:00:40.560" out="00:01:33.880"/>
+    <blank length="00:00:37.600"/>
+    <entry producer="chain24" in="00:02:11.520" out="00:04:07.880"/>
+    <blank length="00:00:09.360"/>
+    <entry producer="chain25" in="00:04:17.280" out="00:04:55.280"/>
+    <entry producer="chain26" in="00:04:55.320" out="00:05:24.760"/>
+    <blank length="00:00:27.400"/>
+    <entry producer="chain27" in="00:05:52.200" out="00:07:55.320"/>
+    <blank length="00:00:24.280"/>
+    <entry producer="chain28" in="00:08:19.640" out="00:08:31.080"/>
+    <blank length="00:00:11.440"/>
+    <entry producer="chain29" in="00:08:42.560" out="00:09:13.200"/>
+    <blank length="00:00:46.760"/>
+    <entry producer="chain30" in="00:10:00.000" out="00:10:26.320"/>
+    <blank length="00:00:07.040"/>
+    <entry producer="chain31" in="00:10:33.400" out="00:10:46.840"/>
+    <blank length="00:04:32.920"/>
+    <entry producer="chain32" in="00:15:19.800" out="00:16:15.640"/>
+    <blank length="00:00:32.960"/>
+    <entry producer="chain33" in="00:16:48.640" out="00:17:19.680"/>
+    <entry producer="chain34" in="00:17:19.720" out="00:17:31.440"/>
+    <blank length="00:00:31.800"/>
+    <entry producer="chain35" in="00:18:03.280" out="00:19:14.880"/>
+    <blank length="00:00:18.040"/>
+    <entry producer="chain36" in="00:19:32.960" out="00:23:47.520"/>
+    <blank length="00:02:01.840"/>
+    <entry producer="chain37" in="00:25:49.400" out="00:27:24.360"/>
+    <blank length="00:00:33.240"/>
+    <entry producer="chain38" in="00:27:57.640" out="00:28:45.440"/>
+    <blank length="00:00:42.520"/>
+    <entry producer="chain39" in="00:29:28.000" out="00:29:56.760"/>
+    <blank length="00:00:08.640"/>
+    <entry producer="chain40" in="00:30:05.440" out="00:30:34.960"/>
+    <blank length="00:01:05.400"/>
+    <entry producer="chain41" in="00:31:40.400" out="00:32:03.520"/>
+    <blank length="00:00:55.240"/>
+    <entry producer="chain42" in="00:32:58.800" out="00:35:40.120"/>
+    <blank length="00:00:31.800"/>
+    <entry producer="chain43" in="00:36:11.960" out="00:36:46.640"/>
+    <blank length="00:00:27.080"/>
+    <entry producer="chain44" in="00:37:13.760" out="00:37:22.680"/>
+  </playlist>
+  <tractor id="tractor0" title="Shotcut version 22.01.30" in="00:00:00.000" out="00:56:55.960">
+    <property name="shotcut">1</property>
+    <property name="shotcut:scaleFactor">0.424844</property>
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">0</property>
+    <properties name="shotcut:markers">
+      <properties name="0">
+        <property name="text">Marker 1</property>
+        <property name="start">00:07:55.360</property>
+        <property name="end">00:07:55.360</property>
+        <property name="color">#008000</property>
+      </properties>
+    </properties>
+    <track producer="background"/>
+    <track producer="playlist0"/>
+    <track producer="playlist1"/>
+    <transition id="transition0">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition1">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="version">0.9</property>
+      <property name="mlt_service">frei0r.cairoblend</property>
+      <property name="threads">0</property>
+      <property name="disable">1</property>
+    </transition>
+    <transition id="transition2">
+      <property name="a_track">0</property>
+      <property name="b_track">2</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition3">
+      <property name="a_track">1</property>
+      <property name="b_track">2</property>
+      <property name="version">0.9</property>
+      <property name="mlt_service">frei0r.cairoblend</property>
+      <property name="threads">0</property>
+      <property name="disable">0</property>
+    </transition>
+  </tractor>
+</mlt>
